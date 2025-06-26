@@ -3,12 +3,12 @@ core:
     ext: site-factory.test
   project:
     # This line changes between branches (1/2)
-    name: factory-main
+    name: site2
 jsonnet:
   docker:
     compose:
       # This line changes between branches (2/2)
-      project_name: factory-main
+      project_name: site2
 app:
   db:
     user: 'user'

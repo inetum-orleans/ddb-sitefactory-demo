@@ -1,0 +1,16 @@
+core:
+  domain:
+    ext: site-factory.test
+  project:
+    # This line changes between branches (1/2)
+    name: factory-main
+jsonnet:
+  docker:
+    compose:
+      # This line changes between branches (2/2)
+      project_name: factory-main
+app:
+  db:
+    user: 'user'
+    password: 'password'
+    db: 'database'

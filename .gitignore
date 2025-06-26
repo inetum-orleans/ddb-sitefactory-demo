@@ -1,0 +1,16 @@
+###> inetum-orleans/docker-devbox ###
+/.docker/web/Dockerfile
+/.docker/postgres/Dockerfile
+/*ddb.local.*
+/.bash_enter
+/.bash_leave
+/.docker/postgres/fixuid.tar.gz
+/.bin/pg_dump
+/.bin/psql
+/.certs/.signer.crt
+/docker-compose.yml
+/.certs/factory-main.site-factory.test.key
+/.certs/factory-main.site-factory.test.crt
+/.docker/web/fixuid.tar.gz
+/public/index.php
+###< inetum-orleans/docker-devbox ###

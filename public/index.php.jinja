@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic website</title>
+</head>
+<body>
+    <p>This is the generic website on branch main.</p>
+    <p>
+        This file is a jinja file just for the sake of the example.
+        In real applications, we would have a `.env.jinja` with those configuration files, which would generate a `.env` file at `ddb configure`.
+    </p>
+    <ul>
+        <li>Project: {{ core.project.name }}</li>
+        <li>URL is: {{ core.domain.value }}</li>
+    </ul>
+
+    Testing connection to the database:
+    <?php
+    $db = new PDO('pgsql:host=db;dbname={{app.db.db}}', '{{app.db.user}}', '{{app.db.password}}');
+    if ($db) {
+        echo '<p>Connection successful!</p>';
+    } else {
+        echo '<p>Connection failed!</p>';
+    }
+    ?>
+</body>
+</html>

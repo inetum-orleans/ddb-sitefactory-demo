@@ -10,7 +10,8 @@
 /.certs/.signer.crt
 /docker-compose.yml
 /.certs/factory-main.site-factory.test.key
-/.certs/factory-main.site-factory.test.crt
 /.docker/web/fixuid.tar.gz
 /public/index.php
+/.certs/site1.site-factory.test.key
+/.certs/site1.site-factory.test.crt
 ###< inetum-orleans/docker-devbox ###

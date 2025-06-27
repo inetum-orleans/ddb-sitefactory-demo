@@ -1,6 +1,5 @@
 local ddb = import 'ddb.docker.libjsonnet';
 
-local domain = std.extVar('core.domain.value');
 local dbConnectionString = 'postgresql://' + std.extVar('app.db.user') + ':' + std.extVar('app.db.password') + '@db/' + std.extVar('app.db.db');
 
 ddb.Compose({
@@ -19,7 +18,7 @@ ddb.Compose({
               ddb.path.project + ':/project',
             ],
           },
-        web: ddb.Build('web') + ddb.VirtualHost('80', domain)+ {
+        web: ddb.Build('web') + ddb.VirtualHost('80', ddb.domain, "front")+ {
             volumes+: [
               ddb.path.project + '/public:/var/www/html',
             ],
